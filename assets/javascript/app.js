@@ -5,14 +5,15 @@ function searchArticle(inputTerm) {
         url: queryURL,
         method: 'GET',
     }).then(function (result) {
-        console.log(queryURL);
         console.log(result);
-        $("#results").text(result.response.docs[0].headline.main);
+        $("#results").append(result.response.docs[0].headline.main);
     })
 }
+
+
 $("#submit-button").on("click", function (event) {
     event.preventDefault();
-    var inputTerm = ("#sterm").val().trim();
-    searchArticle(inputTerm);
+    var value = ("#sterm").val().trim();
+    searchArticle(value);
 });
 
