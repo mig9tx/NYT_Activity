@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>NYTSearch</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <h1 style="font-family: Algerian;">New York Times Search</h1>
+
+    <br>
+
+    <div id="main-container" class="searchBar">
+
+        <div>
+            <form action="/action_page.php">
+                <label for="searchParameters">Search Term:</label>
+                <input type="text" id="sterm" name="searchTerm" placeholder="Search...">
+
+                <label for="recordFile">Number of Records to Retrieve:</label>
+                <select id="record" name="record">
+                    <option value="records">5</option>
+                    <option value="records">4</option>
+                    <option value="records">3</option>
+                    <option value="records">2</option>
+                    <option value="records">1</option>
+                </select>
+
+                <label for="startYear">Start Year (Option):</label>
+                <input type="text" id="syear" name="startingYear" placeholder="Search...">
+
+
+
+                <input id="submit-button" type="submit" value="Submit">
+            </form>
+        </div>
+
+        <section class="main-section">
+           <div id="results"></div>
+        </section>
+
+
+        <footer>
+            <div class="container">
+                Made with Lots of Love.
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
