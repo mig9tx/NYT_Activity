@@ -10,10 +10,9 @@ function searchArticle(inputTerm) {
     })
 }
 
-
-$("#submit-button").on("click", function (event) {
-    event.preventDefault();
-    var value = ("#sterm").val().trim();
-    searchArticle(value);
+$(document).ready(function () {
+    $("#submit-button").on("click", function (event) {
+        var value = $("#sterm").val().trim();
+        searchArticle(value);
+    });
 });
-
